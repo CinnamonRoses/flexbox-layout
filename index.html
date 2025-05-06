@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link href="reset.css" type="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            border: 2px solid #000;
+            height: 300px;
+            margin-bottom: 40px; /* Increased margin for spacing */
+        }
+        .box {
+            background-color: #76b5c5;
+            border: 2px solid #444;
+            color: white;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 5px;
+        }
+        h2, h3 {
+            margin-top: 40px; /* Increased margin for spacing */
+        }
+    </style>
+</head>
+<header>
+    <h1>CSS Flexbox</h1>
+</header>
+<body>
+    <section class="section1">
+    <h2>What is CSS Flexbox?</h2>
+        <ul>
+            <li>Known as Flexbox, or Flexible Box Layout</li>
+            <li>A powerful CSS tool for creating flexible, responsive layouts</li>
+            <li>By defining flex container and its items, Flexbox offers precise control over alignment, spacing, and distribution
+            </li>
+        </ul>
+    </section>
+
+    <section class="section2">
+        <h2>1. Basic Flexbox Container</h2>
+        <div class="container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+
+        <h2>2. Flex Direction</h2>
+        <div class="container" style="flex-direction: column;">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+
+        <h2>3. Justify Content</h2>
+        <!-- Great for navigation -->
+        <!-- Great for quick layouts -->
+        <div class="container" style="justify-content: space-between;"> 
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+
+        <h2>4. Align Items</h2>
+        <!-- Easy way to do absolute center (see below comment)-->
+        <div class="container" style="align-items: flex-end;">
+            <!-- Ab. Center: align-items: center; justify-content: center;-->
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+
+        <h2>5. Flex Wrap</h2>
+        <!-- Great way to have default responsive code and avoid media queries-->
+        <div class="container" style="flex-wrap: wrap;">
+            <div class="box" style="flex: 1 1 100px;">Box 1</div>
+            <div class="box" style="flex: 1 1 100px;">Box 2</div>
+            <div class="box" style="flex: 1 1 100px;">Box 3</div>
+            <div class="box" style="flex: 1 1 100px;">Box 4</div>
+        </div>
+
+        <h2>6. Align Content</h2>
+        <!-- Let you decide how you want to align properties on flex axis-->
+        <div class="container" style="flex-wrap: wrap; align-content: space-between;">
+            <div class="box" style="flex: 1 1 100px;">Box 1</div>
+            <div class="box" style="flex: 1 1 100px;">Box 2</div>
+            <div class="box" style="flex: 1 1 100px;">Box 3</div>
+            <div class="box" style="flex: 1 1 100px;">Box 4</div>
+        </div>
+
+        <h2>7. Flex, Grow, Shrink, and Basis</h2>
+        <!-- Sets up ratio of space take up by box ie. 1 to 2 (twice amount of space) to 1 -->
+        <!-- Flex-shrink takes up less space / opposite of flex-grow -->
+        <!-- style="flex-basis: #px" means that a box will stay at the given size in px-->
+        <div class="container">
+            <div class="box" style="flex-grow: 1;">Box 1</div>
+            <div class="box" style="flex-grow: 2;">Box 2</div>
+            <div class="box" style="flex-grow: 1;">Box 3</div>
+        </div>
+
+        <h2>8. Order</h2>
+        <!-- Great way to order in CSS rather than changing in HTML -->
+        <!-- Great when working with older codebases when HTML cannot be modified -->
+        <div class="container">
+            <div class="box" style="order: 2;">Box 1</div>
+            <div class="box" style="order: 1;">Box 2</div>
+            <div class="box" style="order: 3;">Box 3</div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
